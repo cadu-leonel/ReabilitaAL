@@ -176,7 +176,7 @@
                 <li><strong>Modelo:</strong> <?php echo htmlspecialchars($centro['modelo_nome']) ?> </li>
                 <li><strong>Endereço:</strong> <?php echo htmlspecialchars($centro['centro_endereco']) ?></li>
                 <li><strong>Contato:</strong> <?php echo htmlspecialchars($centro['centro_contato']) ?> </li>
-                <li><strong>Horário de funcionamento:</strong> <?php echo htmlspecialchars($centro['centro_contato']) ?> </li>
+                <li><strong>Horário de funcionamento:</strong> <?php echo htmlspecialchars($centro['centro_horario']) ?> </li>
               </ul>
             </div>
             <div class="portfolio-description">

@@ -37,7 +37,7 @@ p.justificar {
   text-align: justify;
 }
 
-h4,
+h2, h4,
 p.centralizar {
   text-align: center;
 }

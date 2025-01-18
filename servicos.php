@@ -67,14 +67,6 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-
-      <div class="header-social-links d-flex">
-        <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
-      </div>
-
     </div>
   </header>
 
@@ -137,7 +129,7 @@
                 <div class="loading">Carregando</div>
                 <div class="sent-message">Dados enviados</div>
         
-              <div class="text-center"> <button><a href="portfolio.php" class="btn-get-started"> Enviar Dados</a></button> </div>
+                <div class="text-center"><button id="btnget" class="button-envio">Enviar</button></div>
             </form>
           </div>
 
@@ -145,28 +137,7 @@
 
       </div>
     </section><!-- End Contact Section -->
-    <script>
-    document.getElementById('cep').addEventListener('blur', function() {
-        const cep = this.value.replace(/\D/g, '');
-        if (cep.length === 8) {
-            fetch(`https://viacep.com.br/ws/${cep}/json/`)
-                .then(response => response.json())
-                .then(data => {
-                    if (!data.erro) {
-                        document.getElementById('rua').value = data.logradouro;
-                        document.getElementById('bairro').value = data.bairro;
-                        document.getElementById('cidade').value = data.localidade;
-                        document.getElementById('estado').value = data.uf;
-                    } else {
-                        alert("CEP não encontrado!");
-                    }
-                })
-                .catch(error => alert("Erro ao buscar CEP!"));
-        } else {
-            alert("Por favor, insira um CEP válido com 8 dígitos.");
-        }
-    });
-</script>
+    <script src="assets/js/validar-cep.js"></script>
 
   </main><!-- End #main -->
 
@@ -226,13 +197,6 @@
     <div class="credits">
 
     </div>
-  </div>
-  <div class="social-links text-center text-md-right pt-3 pt-md-0">
-    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
   </div>
 </div>
 </footer><!-- End Footer -->

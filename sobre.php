@@ -27,28 +27,17 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
+  
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="#"><span>⚕️Reabilita</span> Alagoas</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -67,21 +56,13 @@
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="header-social-links d-flex">
-        <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
-      </div>
+      </nav>
 
     </div>
   </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
@@ -102,20 +83,15 @@
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
-            <h2>Projeto de TCC da UFAL Arapiraca</h2>
-            <h3>Orientadora: Prof Drª Jussara Almeida de Oliveira Baggio</h3>
+            <h2 class="centralizar">Projeto de TCC da UFAL Arapiraca</h2>
+            <p class="justificar"> <strong>Orientadora: </strong> Prof Drª Jussara Almeida de Oliveira Baggio</p>
             <p>Aluno: Antonio da Costa Neto</p>
             <p>Aluno: Carlos Eduardo Leonel dos Santos
             <p>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-            <p>
-              O Reabilita Alagoas não é apenas um site, mas sim uma plataforma que visa revolucionar o acesso aos
-              serviços de reabilitação em todo o estado. Desenvolvido para conectar profissionais da saúde, instituições
-              de reabilitação e pacientes, o nosso portal utiliza tecnologia de georreferenciamento para simplificar e
-              aprimorar a busca e oferta de cuidados de reabilitação.
-
-
+            <p class="justificar">
+              O Reabilita Alagoas não é apenas um site, mas sim uma plataforma que visa revolucionar o acesso aos serviços de reabilitação em todo o estado. Desenvolvido para conectar profissionais da saúde, instituições de reabilitação e pacientes, o nosso portal utiliza tecnologia de georreferenciamento para simplificar e aprimorar a busca e oferta de cuidados de reabilitação.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> Conhecimentos dos serviços de reabilitação</li>
@@ -136,19 +112,19 @@
 
         <div class="faq-list">
           <ul>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Qual é o objetivo principal do sistema de georreferenciamento? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                <p>
+                <p class="justificar">
                 O objetivo é mapear e localizar os serviços de reabilitação em Alagoas, facilitando o acesso e a consulta de informações sobre esses serviços para pacientes e profissionais de saúde.
                 </p>
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="100">
+            <li data-aos="fade-up">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Quais dados serão incluídos no sistema? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p class="justificar">
                 O sistema incluirá dados sobre a localização, tipos de serviços oferecidos, horários de funcionamento e contatos das unidades de reabilitação.
                 </p>
               </div>
@@ -157,7 +133,7 @@
             <li data-aos="fade-up" data-aos-delay="200">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Como o georreferenciamento pode beneficiar os usuários dos serviços de reabilitação? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p class="justificar">
                 Ele facilita a busca por serviços mais próximos, melhora a orientação sobre os recursos disponíveis e ajuda a planejar o acesso com base na localização.
                 </p>
               </div>
@@ -166,7 +142,7 @@
             <li data-aos="fade-up" data-aos-delay="300">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Que tecnologias podem ser usadas para o desenvolvimento do sistema? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p class="justificar">
                 Tecnologias como GIS (Geographic Information System), bancos de dados espaciais, e desenvolvimento web ou mobile serão essenciais para o mapeamento e acesso às informações.
                 </p>
               </div>
@@ -175,7 +151,7 @@
             <li data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Quem se beneficiará diretamente desse sistema? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p class="justificar">
                 Pacientes, cuidadores, profissionais de saúde e gestores de políticas públicas que precisam de informações sobre a distribuição e disponibilidade dos serviços de reabilitação no estado.
                 </p>
               </div>
@@ -204,7 +180,7 @@
           Arapiraca, 57309-005<br>
           Alagoas <br><br>
           <strong>Telefone:</strong> +55 82 98182-9223 <br>
-          <strong>E-mail:</strong> reabilital@gmail.com <br>
+          <strong>E-mail:</strong> reabilita.al@gmail.com <br>
         </p>
       </div>
 
@@ -246,13 +222,6 @@
     <div class="credits">
 
     </div>
-  </div>
-  <div class="social-links text-center text-md-right pt-3 pt-md-0">
-    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
   </div>
 </div>
 </footer><!-- End Footer -->
