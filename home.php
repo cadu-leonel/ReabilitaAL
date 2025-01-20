@@ -220,7 +220,8 @@
           // Consulta para obter os dados dos centros de reabilitação
           $sql = "SELECT 
           centros_reabilitacao.nome AS centro_nome,
-          centros_reabilitacao.id AS id, 
+          centros_reabilitacao.id AS id,
+          centros_reabilitacao.endereco AS centro_endereco, 
           tipos.nome AS tipo_nome, 
           imagens.caminho AS imagem_caminho
           FROM centros_reabilitacao
@@ -241,6 +242,7 @@
                 <div class="portfolio-info">
                   <h4 class="centralizar"><?php echo htmlspecialchars($row['centro_nome']) ?></h4>
                   <p class="centralizar"><?php echo htmlspecialchars($row['tipo_nome']) ?></p>
+                  <p class="centralizar"><i class="bx bx-map-pin"></i> <?php echo htmlspecialchars($row['centro_endereco']) ?></p>
                   <a href="detalhes.php?id=<?php echo $row['id']; ?>" class="details-link" title="Mais informações"><i class="bx bx-info-circle"></i></a>
                 </div>
               </div>
@@ -271,7 +273,8 @@
           // Consulta para obter os dados dos centros de reabilitação
           $sql = "SELECT 
           centros_reabilitacao.nome AS centro_nome,
-          centros_reabilitacao.id AS id, 
+          centros_reabilitacao.id AS id,
+          centros_reabilitacao.endereco AS centro_endereco,
           tipos.nome AS tipo_nome, 
           imagens.caminho AS imagem_caminho
           FROM centros_reabilitacao
@@ -292,6 +295,7 @@
                 <div class="portfolio-info">
                   <h4 class="centralizar"><?php echo htmlspecialchars($row['centro_nome']); ?></h4>
                   <p class="centralizar"><?php echo htmlspecialchars($row['tipo_nome']) ?></p>
+                  <p class="centralizar"><i class="bx bx-map-pin"></i> <?php echo htmlspecialchars($row['centro_endereco']) ?></p>
                   <a href="detalhes.php?id=<?php echo $row['id']; ?>" class="details-link" title="Mais informações"><i class="bx bx-info-circle"></i></a>
                 </div>
               </div>
@@ -323,7 +327,8 @@
           // Consulta para obter os dados dos centros de reabilitação
           $sql = "SELECT 
           centros_reabilitacao.nome AS centro_nome,
-          centros_reabilitacao.id AS id, 
+          centros_reabilitacao.id AS id,
+          centros_reabilitacao.endereco AS centro_endereco,
           tipos.nome AS tipo_nome, 
           imagens.caminho AS imagem_caminho
           FROM centros_reabilitacao
@@ -344,6 +349,7 @@
                 <div class="portfolio-info">
                   <h4 class="centralizar"><?php echo htmlspecialchars($row['centro_nome']); ?></h4>
                   <p class="centralizar"><?php echo htmlspecialchars($row['tipo_nome']) ?></p>
+                  <p class="centralizar"><i class="bx bx-map-pin"></i> <?php echo htmlspecialchars($row['centro_endereco']) ?></p>
                   <a href="detalhes.php?id=<?php echo $row['id']; ?>" class="details-link" title="Mais informações"><i class="bx bx-info-circle"></i></a>
                 </div>
               </div>
