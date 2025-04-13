@@ -79,8 +79,7 @@
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Sobre a <span>Reabilitação </span></h2>
               <p class="justificar">A reabilitação é um processo multifacetado que visa restaurar ou melhorar
-                a saúde, funcionalidade e
-                qualidade de vida de indivíduos que enfrentam desafios de saúde física, mental ou emocional. Esse
+                a saúde, funcionalidade e qualidade de vida de indivíduos que enfrentam desafios de saúde física, mental ou emocional. Esse
                 processo abrange uma variedade de áreas, desde a recuperação após lesões ou cirurgias até o suporte para
                 pessoas com condições crônicas, deficiências ou distúrbios mentais.</p>
               <div class=" text-center"><a href="" class="btn-get-started">Leia Mais</a>
@@ -336,7 +335,7 @@
             tipos ON centros_reabilitacao.tipo_id = tipos.id
             LEFT JOIN 
             imagens ON centros_reabilitacao.id = imagens.centro_id
-          WHERE centros_reabilitacao.municipio_id = 3;";
+          WHERE centros_reabilitacao.municipio_id >= 3;";
           $result = $conn->query($sql);
 
           // Verifica se há resultados

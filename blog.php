@@ -81,86 +81,89 @@
 
       </div>
     </section><!-- End Breadcrumbs -->
+    <?php
+          // Configurações de conexão com o banco de dados
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "reabilita_al";
 
+          // Conexão com o banco de dados
+          $conn = new mysqli($servername, $username, $password, $dbname);
+
+          // Verifica se houve erro na conexão
+          if ($conn->connect_error) {
+            die("Conexão falhou: " . $conn->connect_error);
+          }
+
+          // Consulta para obter os dados dos centros de reabilitação
+          $sql = "SELECT 
+                  p.id AS postagem_id,
+                  p.titulo AS titulo_postagem,
+                  p.texto AS conteudo_postagem,
+                  p.imagem AS imagem_postagem,
+                  p.data_publicacao,
+                  u.nome AS autor_nome,
+                  u.email AS autor_email,
+                  u.descricao AS autor_descricao,
+                  u.foto AS autor_foto,
+                  c.nome AS categoria_nome,
+                  c.descricao AS categoria_descricao
+                FROM 
+                postagens p
+                INNER JOIN 
+                usuarios u ON p.autor_id = u.id
+                INNER JOIN 
+                categorias c ON p.categoria_id = c.id";
+          $result = $conn->query($sql);
+
+          // Verifica se há resultados
+          if ($result->num_rows > 0) {
+            // Loop pelos resultados e exibição do HTML
+            while ($row = $result->fetch_assoc()) {
+          ?>
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
 
-          <div class="col-lg-8 entries">
+          <div class="col-lg-8 justify-content-center">
 
             <article class="entry">
 
               <div class="entry-img">
-                <img src="assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
+                <img src="assets/img/slide/<?php echo htmlspecialchars($row['imagem_postagem']) ?>" alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">Sobre a Reabilitação</a>
+                <a href="#"><?php echo htmlspecialchars($row['titulo_postagem']) ?></a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Carlos Eduardo</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">14 Out, 2024</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">0
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#"><?php echo htmlspecialchars($row['autor_nome']) ?></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time
+                        datetime="2020-01-01"><?php echo htmlspecialchars($row['data_publicacao']) ?></time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">0
                       comentários </a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p class="justificar">
-                A reabilitação é um processo multifacetado que visa restaurar ou melhorar
-                a saúde, funcionalidade e
-                qualidade de vida de indivíduos que enfrentam desafios de saúde física, mental ou emocional. Esse
-                processo abrange uma variedade de áreas, desde a recuperação após lesões ou cirurgias até o suporte para
-                pessoas com condições crônicas, deficiências ou distúrbios mentais
+                <?php echo htmlspecialchars($row['conteudo_postagem']) ?>
                 </p>
                 <div class="read-more">
-                  <a href="blog-single.html">Leia Mais</a>
+                  <a href="postagem.php?id=<?php echo $row['postagem_id']; ?>">Leia Mais</a>
                 </div>
               </div>
 
             </article><!-- End blog entry -->
-
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/slide/slide-2.jpeg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Reabilitação</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Antonio Neto</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">10 Out, 2024</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">1
-                      comentário </a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                Um dos principais objetivos da reabilitação é capacitar os indivíduos a
-                alcançar o máximo de independência possível, considerando suas condições de saúde. Isso pode envolver a restauração da
-                mobilidade, a melhoria da força muscular, a promoção da saúde mental e emocional, além do
-                desenvolvimento de habilidades adaptativas.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Leia Mais</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
+            
+            
            
-
+<!--
             <div class="blog-pagination">
               <ul class="justify-content-center">
                 <li class="active"><a href="#">1</a></li>
@@ -168,49 +171,19 @@
                 <li><a href="#">3</a></li>
               </ul>
             </div>
+            -->
 
           </div><!-- End blog entries list -->
+          <?php
+            }
+          } else {
+            echo "Nenhuma Postagem Encontrada.";
+          }
 
-          <div class="col-lg-4">
-
-            <div class="sidebar">
-
-              <h3 class="sidebar-title">🔎Pesquisar</h3>
-              <div class="sidebar-item search-form">
-                <form action="">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-              </div><!-- End sidebar search formn-->
-
-              <h3 class="sidebar-title">Categorias</h3>
-              <div class="sidebar-item categories">
-                <ul>
-                  <li><a href="#">Reabilitação <span>(25)</span></a></li>
-                  <li><a href="#"> AVC <span>(12)</span></a></li>
-                  <li><a href="#">Fisioterapia <span>(5)</span></a></li>
-                  <li><a href="#">Outras <span>(22)</span></a></li>
-                </ul>
-              </div>
-
-              <h3 class="sidebar-title">Tags</h3>
-              <div class="sidebar-item tags">
-                <ul>
-                  <li><a href="#">App</a></li>
-                  <li><a href="#">IT</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Mac</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Office</a></li>
-                  <li><a href="#">Creative</a></li>
-                  <li><a href="#">Studio</a></li>
-                  <li><a href="#">Smart</a></li>
-                  <li><a href="#">Tips</a></li>
-                  <li><a href="#">Marketing</a></li>
-                </ul>
-              </div><!-- End sidebar tags-->
-
-            </div><!-- End sidebar -->
+          // Fecha a conexão com o banco de dados
+          $conn->close();
+          ?>
+          
 
           </div><!-- End blog sidebar -->
 
@@ -220,7 +193,7 @@
     </section><!-- End Blog Section -->
 
   </main><!-- End #main -->
-
+  
   <footer id="footer">
 
 <div class="footer-top">

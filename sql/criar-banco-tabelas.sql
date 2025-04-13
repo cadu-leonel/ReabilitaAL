@@ -30,11 +30,12 @@ CREATE TABLE centros_reabilitacao (
     modelo_id INT NOT NULL,
     municipio_id INT NOT NULL,
     endereco TEXT NOT NULL,
-    contato VARCHAR(50), -- Exemplo: Telefone com DDD
+    contato VARCHAR(50),
     email VARCHAR(255),
-    redes_sociais TEXT, -- URLs ou nomes de perfis
-    horario TEXT, -- Exemplo: Seg-Sex, 8h às 17h
-    historia TEXT, -- Histórico ou descrição do centro
+    redes_sociais TEXT,
+    horario TEXT,
+    historia TEXT,
+    mapa TEXT,
     FOREIGN KEY (tipo_id) REFERENCES tipos(id) ON DELETE RESTRICT,
     FOREIGN KEY (organizacao_id) REFERENCES organizacoes(id) ON DELETE RESTRICT,
     FOREIGN KEY (modelo_id) REFERENCES modelos(id) ON DELETE RESTRICT,
@@ -53,21 +54,19 @@ CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    senha VARCHAR(255) NOT NULL, -- Senha deve ser armazenada com hash
-    descricao TEXT, -- Breve descrição do usuário (bio, perfil)
-    foto VARCHAR(255), -- Caminho para a foto do usuário (URL ou local)
+    senha VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    foto VARCHAR(255),
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabela de categorias
 CREATE TABLE categorias (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL UNIQUE, -- Nome da categoria (ex.: Tecnologia, Lifestyle)
-    descricao TEXT, -- Descrição da categoria
+    nome VARCHAR(100) NOT NULL UNIQUE,
+    descricao TEXT,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabela de postagens
 CREATE TABLE postagens (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,

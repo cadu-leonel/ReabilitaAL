@@ -79,55 +79,55 @@
             <div class="col-lg-10">
               <h4 class="centralizar"> 🗺️Formulário de Geolocalização </h4>
               <form action="resultados.php" method="GET">
-              <div class=" row">
-                <div class="col-md-10 form-group">
-                  <label for="name">Nome</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                <div class=" row">
+                  <div class="col-md-10 form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                  </div>
+                  <div class="col-md-2 form-group mt-3 mt-md-0">
+                    <label for="idade">Idade</label>
+                    <input type="number" class="form-control" name="idade" id="idade" required>
+                  </div>
                 </div>
-                <div class="col-md-2 form-group mt-3 mt-md-0">
-                  <label for="idade">Idade</label>
-                  <input type="number" class="form-control" name="idade" id="idade" required>
+                <div class="form-group">
+                  <label for="cep">CEP</label>
+                  <input type="text" class="form-control" id="cep" placeholder="Digite o CEP" required>
                 </div>
-            </div>
-            <div class="form-group">
-              <label for="cep">CEP</label>
-              <input type="text" class="form-control" id="cep" placeholder="Digite o CEP" required>
-            </div>
 
-            <!-- Campo Endereço - Rua -->
-            <div class="form-group">
-              <label for="rua">Rua</label>
-              <input type="text" class="form-control" id="rua" placeholder="Digite o nome da rua" required readonly>
-            </div>
+                <!-- Campo Endereço - Rua -->
+                <div class="form-group">
+                  <label for="rua">Rua</label>
+                  <input type="text" class="form-control" id="rua" placeholder="Digite o nome da rua" required readonly>
+                </div>
 
-            <!-- Campo Endereço - Bairro -->
-            <div class="form-group">
-              <label for="bairro">Bairro</label>
-              <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro" required readonly>
-            </div>
+                <!-- Campo Endereço - Bairro -->
+                <div class="form-group">
+                  <label for="bairro">Bairro</label>
+                  <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro" required readonly>
+                </div>
 
-            <!-- Campo Endereço - Cidade -->
-            <div class="form-group">
-              <label for="cidade">Cidade</label>
-              <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Digite a cidade" required readonly>
-            </div>
+                <!-- Campo Endereço - Cidade -->
+                <div class="form-group">
+                  <label for="cidade">Cidade</label>
+                  <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Digite a cidade" required readonly>
+                </div>
 
-            <!-- Campo Endereço - Estado -->
-            <div class="form-group">
-              <label for="estado">Estado</label>
-              <input type="text" class="form-control" id="estado" placeholder="Digite o estado" style="margin-bottom: 10px;" required readonly>
-            </div>
-            <div class="form-group col-md-4"><select class="form-control" name="deficiencia" id="deficiencia" required>
-                <option value="">Tipo de Deficência </option>
-                <option value="Física">Física</option>
-                <option value="Visual">Visual</option>
-                <option value="Auditiva">Auditiva</option>
-                <option value="Intelectual">Intelectual</option>
-                <option value="Outra">Outra</option>
-              </select></div>
-            <div class="my-3">
+                <!-- Campo Endereço - Estado -->
+                <div class="form-group">
+                  <label for="estado">Estado</label>
+                  <input type="text" class="form-control" id="estado" placeholder="Digite o estado" style="margin-bottom: 10px;" required readonly>
+                </div>
+                <div class="form-group col-md-4"><select class="form-control" name="deficiencia" id="deficiencia" required>
+                    <option value="">Tipo de Deficência </option>
+                    <option value="Física">Física</option>
+                    <option value="Visual">Visual</option>
+                    <option value="Auditiva">Auditiva</option>
+                    <option value="Intelectual">Intelectual</option>
+                    <option value="Outra">Outra</option>
+                  </select></div>
+                <div class="my-3">
 
-              <div class="text-center"><button id="btnget" class="button-envio">Enviar</button></div>
+                  <div class="text-center"><button id="btnget" class="button-envio">Enviar</button></div>
               </form>
             </div>
 

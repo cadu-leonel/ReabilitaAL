@@ -5,4 +5,7 @@ INSERT INTO municipios (nome) VALUES
     ('Palmeira dos Índios'),
     ('Maragogi'),
     ('Penedo'),
-    ('Santana do Ipanema');
+    ('Santana do Ipanema'),
+    ('Delmiro Gouveia'),
+    ('Maribondo'),
+    ('Jatiúca');
